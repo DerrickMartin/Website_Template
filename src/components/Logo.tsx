@@ -1,20 +1,27 @@
 // components/Logo.tsx
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'; 
+import LogoImageSrc from '../assets/sky.jpg'; 
+
 
 const LogoContainer = styled.div`
   text-align: center;
   padding: 1rem;
+  margin-left: 1rem;
 `;
 
 const LogoImage = styled.img`
   width: 100px;
+  height: 60px;
 `;
 
 const Logo: React.FC = () => {
   return (
     <LogoContainer>
-      <LogoImage src="/path-to-your-logo.png" alt="Logo" />
+        <Link to="/"> 
+          <LogoImage src={LogoImageSrc} alt="Logo" />
+        </Link>
     </LogoContainer>
   );
 };
